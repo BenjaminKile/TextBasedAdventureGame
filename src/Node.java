@@ -1,50 +1,71 @@
+//(NodeId, LeftPathID, RightPathID, ForwardPathID, Text)
 public class Node {
 
-    private int ID;
-    private int StudentID;
-    private String firstname;
-    private String surname;
-    private int age;
-    private String programme;
+    private int NodeId;;
+    private int LeftPathID;
+    private int RightPathID;
+    private int ForwardPathID;
+    private String Text;
 
     public Node() {
     }
 
-    public Node(int ID, int studentID, String firstname, String surname, int age, String programme) {
-        this.ID = ID;
-        StudentID = studentID;
-        this.firstname = firstname;
-        this.surname = surname;
-        this.age = age;
-        this.programme = programme;
+    public Node(int nodeId, int leftPathID, int rightPathID, int forwardPathID, String text) {
+        NodeId = nodeId;
+        LeftPathID = leftPathID;
+        RightPathID = rightPathID;
+        ForwardPathID = forwardPathID;
+        Text = text;
     }
 
-    public int getID() {return ID; }
-    public void setID(int ID) {this.ID = ID; }
+    public int getNodeId() {
+        return NodeId;
+    }
 
-    public int getStudentID() { return StudentID;}
-    public void setStudentID(int studentID) {StudentID = studentID; }
+    public void setNodeId(int nodeId) {
+        NodeId = nodeId;
+    }
 
-    public String getFirstname() { return firstname; }
-    public void setFirstname(String firstname) { this.firstname = firstname; }
+    public int getLeftPathID() {
+        return LeftPathID;
+    }
 
-    public String getSurname() { return surname;}
-    public void setSurname(String surname) { this.surname = surname;}
+    public void setLeftPathID(int leftPathID) {
+        LeftPathID = leftPathID;
+    }
 
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    public int getRightPathID() {
+        return RightPathID;
+    }
 
-    public String getProgramme() { return programme; }
-    public void setProgramme(String programme) { this.programme = programme; }
+    public void setRightPathID(int rightPathID) {
+        RightPathID = rightPathID;
+    }
+
+    public int getForwardPathID() {
+        return ForwardPathID;
+    }
+
+    public void setForwardPathID(int forwardPathID) {
+        ForwardPathID = forwardPathID;
+    }
+
+    public String getText() {
+        return Text;
+    }
+
+    public void setText(String text) {
+        Text = text;
+    }
 
     @Override
     public String toString() {
-        return "Node - " +
-                "ID:" + ID +
-                ", StudentID:" + StudentID +
-                ", firstname:'" + firstname + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age:" + age +
-                ", programme:'" + programme + '\'';
+        return "Node{" +
+                "NodeId=" + NodeId +
+                ", LeftPathID=" + LeftPathID +
+                ", RightPathID=" + RightPathID +
+                ", ForwardPathID=" + ForwardPathID +
+                ", Text='" + Text + '\'' +
+                '}';
     }
 }
