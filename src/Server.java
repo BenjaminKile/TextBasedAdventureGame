@@ -20,7 +20,7 @@ public class Server {
             //System.out.println(getLine());
             String[] lineArray = getLine().split("\\s*,\\s*");
           Node n = new Node();
-          try {
+          try {//come back here to remove the try catch block
               n.setNodeId(Integer.parseInt(lineArray[0]) );
               n.setLeftPathID(Integer.parseInt(lineArray[1]));
               n.setRightPathID(Integer.parseInt(lineArray[2]));
@@ -43,6 +43,15 @@ public class Server {
         }
 
         return s;
+    }
+
+    public Node getNode(int Id){
+        for(Node n: nodes){
+            if(n.getNodeId() == Id){
+                return n;
+            }
+        }
+        return null;
     }
 
     public String getLine() {
