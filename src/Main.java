@@ -99,7 +99,8 @@ public class Main {
         }
     }
 
-    //Old method for getting input from the scanner
+    //Old method for getting input from the scanner *******************************************************************************************
+    // ****************************************************************************************************************************************
     /*public static int getInput(Scanner io){
         return io.nextInt();
     }*/
@@ -118,6 +119,7 @@ public class Main {
         return -1;
     }
 
+    //method to return true if it's a node where it's a dead endS
     private static boolean returnNodeCondtion(Node n){
         if(n.getLeftPathID() == n.getRightPathID() && n.getRightPathID() == n.getForwardPathID() && n.getLeftPathID() == -1){
             return true;
