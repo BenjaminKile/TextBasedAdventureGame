@@ -8,28 +8,28 @@ public class Server {
     //Data
     private Scanner fileLink;
     private ArrayList<Node> nodes;
-    private int currentIndex = 0;
-    private Scanner io;
+    private  Scanner io;
 
     public Server()  throws FileNotFoundException {
         java.io.File prc = new java.io.File("src/Nodes.csv");
         fileLink = new Scanner(prc);
         nodes = new ArrayList<Node>();
+
         io = new Scanner(System.in);
         while(hasAnotherLine()){
+            //debug
             //System.out.println(getLine());
             String[] lineArray = getLine().split("\\s*,\\s*");
+            //debug
+            //System.out.println(lineArray.length);
           Node n = new Node();
-          try {//come back here to remove the try catch block
-              n.setNodeId(Integer.parseInt(lineArray[0]) );
-              n.setLeftPathID(Integer.parseInt(lineArray[1]));
-              n.setRightPathID(Integer.parseInt(lineArray[2]));
-              n.setForwardPathID(Integer.parseInt(lineArray[3]));
-              n.setText(lineArray[4]);
-          }
-          catch (NumberFormatException e) {
-              e.printStackTrace();
-          }
+          //will cause errors if the csv file isn't setup properly
+            n.setNodeId(Integer.parseInt(lineArray[0]) );
+            n.setLeftPathID(Integer.parseInt(lineArray[1]));
+            n.setRightPathID(Integer.parseInt(lineArray[2]));
+            n.setForwardPathID(Integer.parseInt(lineArray[3]));
+            n.setText(lineArray[4]);
+            n.setSymbol(lineArray[5]);
             nodes.add(n);
         }
     }
@@ -53,6 +53,19 @@ public class Server {
         }
         return null;
     }
+
+    public int getInput(){
+        return io.nextInt();
+    }
+
+    public void nextLine(){
+        io.nextLine();
+    }
+
+    public String getString(){
+        return io.next();
+    }
+
 
     public String getLine() {
         return fileLink.nextLine();

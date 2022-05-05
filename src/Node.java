@@ -6,17 +6,21 @@ public class Node {
     private int RightPathID;
     private int ForwardPathID;
     private String Text;
+    private String Symbol;
 
     public Node() {
     }
 
-    public Node(int nodeId, int leftPathID, int rightPathID, int forwardPathID, String text) {
+    //not used but kept for future development/ completeness
+    public Node(int nodeId, int leftPathID, int rightPathID, int forwardPathID, String text, String symbol) {
         NodeId = nodeId;
         LeftPathID = leftPathID;
         RightPathID = rightPathID;
         ForwardPathID = forwardPathID;
         Text = text;
+        Symbol = symbol;
     }
+
 
     public int getNodeId() {
         return NodeId;
@@ -58,6 +62,14 @@ public class Node {
         Text = text;
     }
 
+    public String getSymbol() {
+        return Symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        Symbol = symbol;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
@@ -66,6 +78,7 @@ public class Node {
                 ", RightPathID=" + RightPathID +
                 ", ForwardPathID=" + ForwardPathID +
                 ", Text='" + Text + '\'' +
+                ", Symbol='" + Symbol + '\'' +
                 '}';
     }
 }

@@ -1,44 +1,43 @@
--1,1,1,1,End node
-1,2,4,3,node 1
-2,1,1,1,node 2
-3,5,7,6,node 3
-4,8,9,0,node 4
-5,2,0,10,node 5
-6,0,12,11,node 6
-7,3,3,3,node 7
-8,4,4,4,node 8
-9,13,15,14,node 9
-10,5,5,5,node 10
-11,16,0,17,node 11
-12,6,6,6,node 12
-13,18,20,19,node 13
-14,9,9,9,node 14
-15,21,22,0,node 15
-16,0,24,23,node 16
-17,11,11,11,node 17
-18,7,0,25,node 18
-19,0,27,26,node 19
-20,13,13,13,node 20
-21,15,15,15,node 21
-22,28,29,0,node 22
-23,16,16,16,node 23
-24,0,7,30,node 24
-25,18,18,18,node 25
-26,31,33,32,node 26
-27,0,14,34,node 27
-28,14,0,34,node 28
-29,34,0,35,node 29
-30,24,24,24,node 30
-31,25,0,37,node 31
-32,38,39,0,node 32
-33,0,34,40,node 33
-34,27,27,27,node 34
-35,28,28,28,node 35
-36,29,29,29,node 36
-37,31,31,31,node 37
-38,42,0,41,node 38
-39,-1,-1,-1,node 39
-40,33,33,33,node 40
-41,37,0,43,node 41
-42,36,36,36,node 42
-43,41,41,41,node 43
+1,2,4,3,Your otions are: Left Right or Forward,square
+2,1,1,1,You reach a dead end you turn around and go back.,null
+3,5,7,6,Your otions are: Left Right or Forward, fish
+4,8,9,0,Your otions are: Left or Right, triangle
+5,2,0,10,Your otions are: Left or Forward, snail
+6,0,12,11,Your otions are: Right or Forward, circle
+7,3,3,3,You reach a dead end you turn around and go back.,null
+8,4,4,4,You reach a dead end you turn around and go back.,null
+9,13,15,14,Your otions are: Left Right or Forward, house
+10,5,5,5,You reach a dead end you turn around and go back.,null
+11,16,0,17,Your otions are: Left or Forward, bee
+12,6,6,6,You reach a dead end you turn around and go back.,null
+13,18,20,19,Your otions are: Left Right or Forward, butterfly
+14,9,9,9,You reach a dead end you turn around and go back.,null
+15,21,22,0,Your otions are: Left or Right, moon
+16,0,24,23,Your otions are: Right or Forward, bat
+17,11,11,11,You reach a dead end you turn around and go back.,null
+18,7,0,25,Your otions are: Left or Forward, maple leaf
+19,0,27,26,Your otions are: Right or Forward, shell
+20,13,13,13,You reach a dead end you turn around and go back.,null
+21,15,15,15,You reach a dead end you turn around and go back.,null
+22,28,29,0,Your otions are: Left or Right, sun
+23,16,16,16,You reach a dead end you turn around and go back.,null
+24,0,7,30,Your otions are: Right or Forward, duck
+25,18,18,18,You reach a dead end you turn around and go back.,null
+26,31,33,32,Your otions are: Left Right or Forward, cloud
+27,0,14,34,Your otions are: Right or Forward, tent
+28,14,0,34,Your otions are: Left or Forward, boat
+29,34,0,35,Your otions are: Left or Forward, pineapple
+30,24,24,24,You reach a dead end you turn around and go back.,null
+31,25,0,37,Your otions are: Left or Forward, horse
+32,38,39,0,Your otions are: Left or Right, thumbs up
+33,0,34,40,Your otions are: Right or Forward, dragonfly
+34,27,27,27,You reach a dead end you turn around and go back.,null
+35,28,28,28,You reach a dead end you turn around and go back.,null
+36,29,29,29,You reach a dead end you turn around and go back.,null
+37,31,31,31,You reach a dead end you turn around and go back.,null
+38,42,0,41,Your otions are: Left or Forward, bird
+39,-1,-1,-1,You see the light of day as you exit the Maze.,null
+40,33,33,33,You reach a dead end you turn around and go back.,null
+41,37,0,43,Your otions are: Left or Forward, star
+42,36,36,36,You reach a dead end you turn around and go back.,null
+43,41,41,41,You reach a dead end you turn around and go back.,null
