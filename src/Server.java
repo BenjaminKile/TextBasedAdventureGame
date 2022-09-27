@@ -24,6 +24,7 @@ public class Server {
             //System.out.println(lineArray.length);
           Node n = new Node();
           //will cause errors if the csv file isn't setup properly
+
             n.setNodeId(Integer.parseInt(lineArray[0]) );
             n.setLeftPathID(Integer.parseInt(lineArray[1]));
             n.setRightPathID(Integer.parseInt(lineArray[2]));

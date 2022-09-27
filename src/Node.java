@@ -5,7 +5,7 @@ public class Node {
     private int LeftPathID;
     private int RightPathID;
     private int ForwardPathID;
-    private String Text;
+    public String Text;
     private String Symbol;
 
     public Node() {
@@ -13,12 +13,12 @@ public class Node {
 
     //not used but kept for future development/ completeness
     public Node(int nodeId, int leftPathID, int rightPathID, int forwardPathID, String text, String symbol) {
-        NodeId = nodeId;
-        LeftPathID = leftPathID;
-        RightPathID = rightPathID;
-        ForwardPathID = forwardPathID;
-        Text = text;
-        Symbol = symbol;
+        this.NodeId = nodeId;
+        this.LeftPathID = leftPathID;
+        this.RightPathID = rightPathID;
+        this.ForwardPathID = forwardPathID;
+        this.Text = text;
+        this.Symbol = symbol;
     }
 
 

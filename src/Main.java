@@ -21,15 +21,15 @@ public class Main {
             System.out.println("You enter the Maze.");
             Node n = server.getNode(1);
             decisionLoop(n);
-            System.out.println("Would you like the play again?\nEnter n to stop.");
+            System.out.println("Would you like the play again?\nEnter any key to continue and n to stop.");
             //will need to change this variable
             String text = server.getString();
             if(Objects.equals(text, "n")){
                break;
             }
-            /*else{
-                System.out.println("not a n");
-            }*/
+            else{
+                System.out.println("Restarting...");
+            }
         }
     }
     //A method to deal with the user input
@@ -119,7 +119,7 @@ public class Main {
         return -1;
     }
 
-    //method to return true if it's a node where it's a dead endS
+    //method to return true if it's a node where it's a dead end
     private static boolean returnNodeCondtion(Node n){
         if(n.getLeftPathID() == n.getRightPathID() && n.getRightPathID() == n.getForwardPathID() && n.getLeftPathID() == -1){
             return true;
