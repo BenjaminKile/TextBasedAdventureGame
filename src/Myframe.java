@@ -2,13 +2,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Myframe extends JFrame implements ActionListener {
+public class Myframe extends JFrame /*implements ActionListener*/ {
     JButton button1;
 
     Myframe(){
         JButton button1 = new JButton();
         button1.setBounds(100, 200,100, 50 );
-        button1.addActionListener(this);
+        //button1.addActionListener(this);
 
         JButton button2 = new JButton();
         button2.setBounds(250, 200, 100, 50);
@@ -24,12 +24,33 @@ public class Myframe extends JFrame implements ActionListener {
         this.add(button2);
         this.add(button3);
         this.setVisible(true);
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            System.out.println("Left");
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Forward");
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Right");
+            }
+        });
     }
 
-    @Override
+    /*@Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == button1);
-        System.out.println("Left");
+        if(e.getSource() == button1){
+            System.out.println("Left");
+        }
+    }*/
 
-    }
 }
