@@ -6,9 +6,7 @@ import java.util.Objects;
 public class Main {
     //Data
     private static Server server;
-    private static int endNode = 39;
-    private static String introToNode = "You arrive at a junction with a ";
-    // useless data
+    //useless data
     static String leftPathTxt = "1 to go left";
     static String rightPathTxt = "2 to go right";
     static String forwardPathTxt = "3 to go forward";
@@ -28,6 +26,7 @@ public class Main {
                break;
             }
             else{
+                //TODO enter and backspace don't restart it
                 System.out.println("Restarting...");
             }
         }
@@ -35,6 +34,7 @@ public class Main {
     //A method to deal with the user input
     // and get the decision at each node
     private static int getDecision(int input, boolean isOkInput, Node n){
+        // TODO maybe?
         // try catch block ready check?
         //https://stackoverflow.com/questions/45509594/getting-input-in-java-using-nextint
         while (!isOkInput){
@@ -75,8 +75,10 @@ public class Main {
         while(true){
             //debug
             //System.out.println(n.toString());
+            String introToNode = "You arrive at a junction with a ";
 
             int nextNodeId;
+            int endNode = 39;
             if (n.getLeftPathID() == n.getRightPathID() && n.getRightPathID() == n.getForwardPathID() && n.getLeftPathID() != -1){//
                 System.out.println(n.getText());
                 nextNodeId = n.getLeftPathID();
@@ -86,6 +88,7 @@ public class Main {
                 break;
             }
             else {
+
                 System.out.println(introToNode + n.getSymbol() + " symbol. ");
                 System.out.println(n.getText());
                 //put into method to break up the code a bit to make it more readable
@@ -99,11 +102,6 @@ public class Main {
         }
     }
 
-    //Old method for getting input from the scanner *******************************************************************************************
-    // ****************************************************************************************************************************************
-    /*public static int getInput(Scanner io){
-        return io.nextInt();
-    }*/
 
     //A method to get the path id based on input
     static int getPathId(int num, Node n){

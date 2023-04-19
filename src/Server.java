@@ -13,7 +13,7 @@ public class Server {
     public Server()  throws FileNotFoundException {
         java.io.File prc = new java.io.File("src/Nodes.csv");
         fileLink = new Scanner(prc);
-        nodes = new ArrayList<Node>();
+        nodes = new ArrayList<>();
 
         io = new Scanner(System.in);
         while(hasAnotherLine()){
@@ -37,13 +37,13 @@ public class Server {
 
     public String toString() {
 
-        String s = "";
+        StringBuilder s = new StringBuilder();
 
         for(Node n : nodes){
-            s += n.toString() + "\n";
+            s.append(n.toString()).append("\n");
         }
 
-        return s;
+        return s.toString();
     }
 
     public Node getNode(int Id){
